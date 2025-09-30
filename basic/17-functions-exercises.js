@@ -59,7 +59,20 @@ function numeroPrimo(unNumero) {
   return true;
 }
 // 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos cómunes entre ambos
-
+function comparacionArrays(array1, array2){
+  let set1 = new Set()
+  for(let elemento1 of array1 ){
+    for(let elemento2 of array2){
+      if(elemento1 === elemento2){
+        set1.add(elemento1)
+      }
+    }
+  }
+  return Array.from(set1)
+}
+let array2 = ["roy","fati",2,2]
+let array1 = ["hola","roy",1,2]
+console.log(comparacionArrays(array1, array2))
 // 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
 
 // 8. Crea una función que reciba un array de números y devuelva un nuevo array con cada número elevado al cuadrado
