@@ -34,15 +34,30 @@ function contarVocales(texto){
 console.log(contarVocales("rodrigo"))
 
 // 4. Crea una función que reciba un array de strings y devuelva un nuevo array con los strings en mayúsculas
-let arrayDos = ["rodrigo", "automovil","kali","windows","macos"]
-function mayusText(arrayDos){
-  let minus
-  for(let texto of arrayDos){
-    minus = 
-  }
-}
-// 5. Crea un función que reciba un número y devuelva true si es primo, y false en caso contrario
 
+function mayusText(arrayDos){
+  let arrayVacio = []
+  for(let texto of arrayDos){ 
+    texto = texto.toUpperCase()
+    arrayVacio.push(texto)
+  } 
+  return arrayVacio
+} 
+
+let arrayDos = ["perro","gato","borrego"] 
+
+console.log(mayusText(arrayDos))
+
+// 5. Crea un función que reciba un número y devuelva true si es primo, y false en caso contrario
+function numeroPrimo(unNumero) {
+  if (unNumero < 2) return false; 
+  for (let i = 2; i < unNumero; i++) {
+    if (unNumero % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
 // 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos cómunes entre ambos
 
 // 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
